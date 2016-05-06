@@ -7,7 +7,13 @@
         function ListController(){
           var vm = this;
           vm.data = turtlesData;
-          vm.wasup = "helllo"
+          vm.activeTurtle = {};
+          vm.changeActiveTurtle = changeActiveTurtle;
+
+          function changeActiveTurtle(index){
+            vm.activeTurtle = index;
+          }
+
         };
 
       var turtlesData = [
