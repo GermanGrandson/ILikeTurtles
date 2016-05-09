@@ -10,9 +10,15 @@
           vm.activeTurtle = {};
           vm.changeActiveTurtle = changeActiveTurtle;
           vm.search = '';
+          vm.quizActive = false;
+          vm.activateQuiz = activateQuiz;
 
           function changeActiveTurtle(index){
             vm.activeTurtle = index;
+          }
+
+          function activateQuiz(){
+            vm.quizActive = true;
           }
 
         };
