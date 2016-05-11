@@ -1,16 +1,17 @@
 (function(){
  angular.module("turtleFacts")
-        .controller("listController", ListController)
+        .controller("listController", ListController);
 
-        var vm = this;
+        ListController.$inject = ['quizMetrics'];
 
-        function ListController(){
+        function ListController(quizMetrics){
           var vm = this;
+          vm.quizMetrics = quizMetrics;
           vm.data = turtlesData;
           vm.activeTurtle = {};
           vm.changeActiveTurtle = changeActiveTurtle;
           vm.search = '';
-          vm.quizActive = false;
+          // vm.quizActive = false;
           vm.activateQuiz = activateQuiz;
 
           function changeActiveTurtle(index){
@@ -18,10 +19,13 @@
           }
 
           function activateQuiz(){
-            vm.quizActive = true;
+            vm.quizMetrics.quizActive = true;
+            // quizMetrics.changeState(true);
           }
 
         };
+
+
 
       var turtlesData = [
         {
