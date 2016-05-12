@@ -11,6 +11,12 @@
            vm.quizMetrics = quizMetrics;
            vm.dataService = DataService;
           //  vm.data = quizQuestions;
+           vm.activeQuestion = 0;
+           vm.questionAnswered = questionAnswered;
         };
+
+        function questionAnswered(){
+
+        }
 
 })();
