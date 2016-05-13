@@ -73,7 +73,8 @@
           vm.finalize= false;
           numQuestionsAnswered = 0;
           vm.activeQuestion= 0;
-          quizMetrics.markQuiz('quiz', false);
+          quizMetrics.markQuiz();
+          quizMetrics.changeState('quiz', false);
           quizMetrics.changeState('results', true);
         }
       }
