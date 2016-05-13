@@ -20,7 +20,7 @@
 
           function activateQuiz(){
             // vm.quizMetrics.quizActive = true;
-            quizMetrics.changeState(true);
+            quizMetrics.changeState('quiz', true);
           }
 
         };
