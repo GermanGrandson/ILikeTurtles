@@ -193,6 +193,11 @@
           </div>
         </div>
   </div>
+  <div class='row'>
+    <div class='col-xs-12 top-buffer'>
+      <h2>You Scored {{results.quizMetrics.numCorrect}} / {{results.dataService.quizQuestions.length}} </h2>
+      <h2><strong>{{results.calculatePerc() | number:2}}%</strong></h2>
+
   <div  class='row'>
     <h3>Questions:</h3>
     <div class='well well-sm'>
@@ -203,9 +208,9 @@
             <div class='col-sm-6' ng-repeat='answer in results.dataService.quizQuestions[results.activeQuestion].possibilities'>
               <h4 class='answer' ng-class='results.getAnswerClass($index)'>
                 {{answer.answer}}
-              </h4>
               <p class='pull-right' ng-show='$index !== results.quizMetrics.correctAnswers[results.activeQuestion] && $index === results.dataService.quizQuestions[results.activeQuestion].selected'>Your Answer</p>
               <p class='pull-right' ng-show='$index === results.quizMetrics.correctAnswers[results.activeQuestion]'>Correct Answer</p>
+            </h4>
             </div>
           </div>
         </div>
